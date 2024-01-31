@@ -1,41 +1,66 @@
+import { useRef, useEffect } from 'react';
+
 import './Card.scss';
 
-const Card = ({ data }) => {
+const Card = ({
+	imageUrl,
+	title,
+	description,
+	ethereumAmount,
+	remainingTime,
+	author,
+}) => {
+	const imageUrlRef = useRef();
+	const titleRef = useRef();
+	const descriptionRef = useRef();
+	const ethereumAmountRef = useRef();
+	const remainingTimeRef = useRef();
+	const authorImgRef = useRef();
+	const authorNameRef = useRef();
+
+	useEffect(() => {
+		imageUrlRef.current.src = imageUrl;
+		titleRef.current.textContent = title;
+		descriptionRef.current.textContent = description;
+		ethereumAmountRef.current.textContent = ethereumAmount;
+		remainingTimeRef.current.textContent = remainingTime;
+		authorImgRef.current.src = author.imageUrl;
+		authorNameRef.current.textContent = author.name;
+	});
+
 	return (
 		<article className="card">
 			<div className="card__image">
-				<img width="302" height="302" src={data.imageUrl} alt="" />
+				<img ref={imageUrlRef} width="302" height="302" alt="" />
 			</div>
 			<div className="card__content">
 				<h2 className="card__title">
-					<a href="#/" className="btn btn--link">
-						{data.title}
-					</a>
+					<a ref={titleRef} href="#/" className="btn btn--link"></a>
 				</h2>
-				<p className="card__desc">{data.description}</p>
+				<p ref={descriptionRef} className="card__desc"></p>
 				<ul className="card__stats-list">
 					<li className="card__stats-list-item">
 						<i className="icon-ethereum" aria-hidden="true"></i>
-						<span>{data.ethereumAmount} ETH</span>
+						<span ref={ethereumAmountRef}></span>
 					</li>
 					<li className="card__stats-list-item">
 						<i className="icon-clock" aria-hidden="true"></i>
-						<span>{data.remainingTime} days left</span>
+						<span ref={remainingTimeRef}></span>
 					</li>
 				</ul>
 				<div className="card__author">
 					<img
+						ref={authorImgRef}
 						className="card__author-img"
 						width="33"
 						height="33"
-						src={data.author.imageUrl}
-						alt={data.author.name}
 					/>
 					<span className="card__author-desc">
 						Creation of&nbsp;
-						<a href="#/" className="btn btn--link">
-							{data.author.name}
-						</a>
+						<a
+							ref={authorNameRef}
+							href="#/"
+							className="btn btn--link"></a>
 					</span>
 				</div>
 			</div>

@@ -1,23 +1,19 @@
-import { forwardRef, useImperativeHandle, useRef } from 'react';
+import { useRef, useEffect } from 'react';
 
 import './Header.scss';
 
-const Header = forwardRef(function Header(props, ref) {
-	const title = useRef();
+const Header = ({ title }) => {
+	const titleRef = useRef();
 
-	useImperativeHandle(ref, () => {
-		return {
-			initTitle(value) {
-				title.current.textContent = value;
-			},
-		};
+	useEffect(() => {
+		titleRef.current.textContent = title;
 	});
 
 	return (
 		<header>
-			<h1 ref={title} className="sr-only"></h1>
+			<h1 ref={titleRef} className="sr-only"></h1>
 		</header>
 	);
-});
+};
 
 export default Header;
