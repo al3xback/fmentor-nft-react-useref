@@ -25,6 +25,7 @@ const Card = ({
 		ethereumAmountRef.current.textContent = ethereumAmount;
 		remainingTimeRef.current.textContent = remainingTime;
 		authorImgRef.current.src = author.imageUrl;
+		authorImgRef.current.alt = author.name;
 		authorNameRef.current.textContent = author.name;
 	});
 
