@@ -2,6 +2,7 @@
 	"name": "fmentor-nft-react-useref",
 	"private": true,
 	"version": "0.0.0",
+	"type": "module",
 	"scripts": {
 		"sass-dev": "sass --watch src/assets/scss/main.scss src/assets/css/main.css",
 		"sass-prod": "sass src/assets/scss/main.scss src/assets/css/main.css --style=compressed --no-source-map",
