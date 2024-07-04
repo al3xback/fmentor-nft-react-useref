@@ -3,6 +3,8 @@
 	"private": true,
 	"version": "0.0.0",
 	"type": "module",
+	"author": "alex <al3xback@gmail.com>",
+	"license": "ISC",
 	"scripts": {
 		"sass-dev": "sass --watch src/assets/scss/main.scss src/assets/css/main.css",
 		"sass-prod": "sass src/assets/scss/main.scss src/assets/css/main.css --style=compressed --no-source-map",
