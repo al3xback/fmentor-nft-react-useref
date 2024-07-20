@@ -16,8 +16,9 @@ Users should be able to:
 ### Built with
 
 - Semantic HTML5 markup
-- React + Vite
+- React
 - UseRef
+- Vite
 - Mobile-first workflow
 
 ## Author
