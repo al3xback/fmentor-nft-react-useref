@@ -36,7 +36,7 @@ const Card = ({
 			</div>
 			<div className="card__content">
 				<h2 className="card__title">
-					<a ref={titleRef} href="#/" className="btn btn--link"></a>
+					<a ref={titleRef} href="#" className="btn btn--link"></a>
 				</h2>
 				<p ref={descriptionRef} className="card__desc"></p>
 				<ul className="card__stats-list">
@@ -60,7 +60,7 @@ const Card = ({
 						Creation of&nbsp;
 						<a
 							ref={authorNameRef}
-							href="#/"
+							href="#"
 							className="btn btn--link"></a>
 					</span>
 				</div>
