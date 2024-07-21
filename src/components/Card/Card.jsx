@@ -61,7 +61,8 @@ const Card = ({
 						<a
 							ref={authorNameRef}
 							href="#"
-							className="btn btn--link"></a>
+							className="btn btn--link"
+						></a>
 					</span>
 				</div>
 			</div>
